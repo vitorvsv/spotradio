@@ -22,7 +22,7 @@ export class Service {
         // try to access the file (to verify if it exists), in case of error throws an exception!
         await fsPromises.access(fullFilePath);
 
-        const fileType = extname(fullFilePath);
+        const fileType = extname(fullFilePath).toString().replace('.', '');
 
         return {
             type: fileType,

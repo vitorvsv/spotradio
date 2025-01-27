@@ -9,19 +9,14 @@ const {
         homeHtml,
         controllerHtml
     },
+    constants: {
+        CONTENT_TYPE
+    }
 } = config;
 
 const controller = new Controller();
 
-function getType(type) {    
-    const types = {
-        html: 'text/html',
-    }
-
-    type = type.toString().replace('.', '');
-    
-    return types[type] || '';
-}
+function getType(type) { return CONTENT_TYPE[type] || '' }
 
 async function mapRoutes(req, res) {
 
@@ -68,6 +63,10 @@ async function mapRoutes(req, res) {
             stream,
             type
         } = await controller.getFileStream(url);
+
+        res.writeHead(200, {
+            'Content-Type': getType(type)
+        })
 
         return stream.pipe(res);
     }
