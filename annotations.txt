@@ -1,0 +1,7 @@
+server
+    service = Bussiness logic will be here
+    controller = Responsible to connect services and routes
+    routes = Routes to access the resources
+    server = It's responsable by providing the web server (but it doesn't instancy)
+    index = Make the app available on the web
+    config = General configurations

@@ -1,0 +1,25 @@
+{
+  "name": "spotradio",
+  "version": "1.0.0",
+  "description": "This project is a Radio where we can simulate some effects side by side a audio player that is running and the user will be able to listen the audio and the effect at the same time equals occurs on a live radio :D",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "live": "nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "17"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "pino": "7.8",
+    "pino-pretty": "7.5"
+  }
+}
