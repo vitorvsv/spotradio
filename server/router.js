@@ -87,8 +87,7 @@ function handleError(error, res) {
     return res.end();
 }
 
-
 export function router(req, res) {
     return mapRoutes(req, res)
-            .catch(error => handleError(error, res) )
+            .catch(error => handleError(error, res))
 }
