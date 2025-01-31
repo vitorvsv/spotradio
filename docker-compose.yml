@@ -1,0 +1,18 @@
+version: '2.1'
+services:
+  live-reload:
+    image: spotradio
+    build: ./
+    environment:
+      PORT: 3000
+    command:
+      - npm
+      - run
+      - live
+    volumes:
+      - .:/spotradio
+      - node_modules:/spotradio/node_modules
+    ports:
+      - "3000:3000"
+volumes:
+  node_modules: {}
